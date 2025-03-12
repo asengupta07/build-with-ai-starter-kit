@@ -16,10 +16,5 @@ def generate(prompt: str) -> str:
 
 def analyse_image(image: Image.Image, prompt: str) -> str:
     model = genai.GenerativeModel("gemini-2.0-flash")
-    response = model.generate_content(
-        [
-            prompt,
-            image
-        ]
-    )
+    response = model.generate_content([prompt, image])
     return response.text
