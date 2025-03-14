@@ -46,10 +46,22 @@ We've designed this kit to be both approachable and extensible, allowing you to 
    ```bash
    cp .env.example .env
    ```
+   - Get your Google API key:
+     1. Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
+     2. Sign in with your Google account if you haven't already
+     3. Click on "Get API key" in the left menu
+     4. Click "Create API key"
+     5. Copy the generated API key. **Important:** Save this key securely as it will only be shown once
+     
    - Add your Google API key to the `.env` file:
    ```
    GOOGLE_API_KEY=your_api_key_here
    ```
+
+   **Important Security Notes:**
+   - Never commit your API key to version control
+   - Keep your API key secure and don't share it with others
+   - For production applications, consider using environment variables or a secure secrets manager
 
 5. **Run the application**
    ```bash
