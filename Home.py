@@ -1,9 +1,22 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title="Build with AI Starter Kit", page_icon="🤖", layout="centered"
-)
+# Add a theme toggle switch
+dark_mode = st.sidebar.toggle("🌙 Dark Mode")
 
-st.write("# Build with AI Starter Kit")
-
-st.image("assets/build.jpeg")
+# Apply dark mode if enabled
+if dark_mode:
+    st.markdown(
+        """
+        <style>
+            body {
+                background-color: #121212;
+                color: white;
+            }
+            .stTextInput, .stButton {
+                color: white !important;
+                background-color: #333333 !important;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
