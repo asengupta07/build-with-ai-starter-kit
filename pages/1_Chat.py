@@ -43,3 +43,8 @@ if prompt := st.chat_input("What is up?"):
         stream = stream_response(prompt)
         response = st.write_stream(stream)
     st.session_state.messages.append({"role": "assistant", "content": response})
+    
+# Add a "Clear Chat" button
+if st.button("🗑️ Clear Chat"):
+    st.session_state.messages = []  # Reset chat history
+    st.experimental_rerun()
